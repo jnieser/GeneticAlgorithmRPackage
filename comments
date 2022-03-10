@@ -1,0 +1,62 @@
+A-: Solid work; a few limitations noted below.
+
+## ease of accessing package, help, tests:
+
+Good
+
+## main help page (select):
+
+Good info on arguments plus an example. No description of algorithm.
+No description of output, which is a bit complicated. (No description of what Hall of Fame is.)
+
+## quality of user interface (function arguments, flexibility):
+
+Basing convergence on the mean fitness doesn't really make sense to me given that we are trying to find the best model.
+
+X can't be a dataframe - a bit unfriendly to users.
+
+Good user flexibility.
+
+## performance on my tests:
+
+performance on baseball known: finds a decent model but not the best. If make converge.thres more strict, it finds the best model.
+performance on baseball full: finds a decent model but not the best.If make converge.thres more strict, it finds a good model.
+performance on big-p: doesn't find a good model.
+
+## testing
+
+Passed tests.
+
+Overall testing of whether find better model with 5 iterations than 1. This is a rather limited check of overall performance. Unit tests focus on format and validity of output. 
+
+## writeup (including examples):
+
+Clearly presented.
+
+Only example is on a deterministic one, which is not a realistic case. Also no comparison against true model.
+
+## code efficiency
+
+A bit slow on basic example. Fast on big GLM if using default convergence, which doesn't lead to good results.
+
+mutation could be vectorized.
+
+## code organization/clarity/elegance:
+
+Concise and easy to follow.
+
+Various assertions in main function.
+
+There's nothing wrong with a model with no regressors - it's just an intercept only model.
+
+## code comments/formatting:
+
+Helpers have roxygen; otherwise comments are limited, which is fine as the code is straightforward.
+
+## parallelization:
+
+None
+
+## equality of workload:
+
+Good.
